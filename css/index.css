@@ -1,0 +1,493 @@
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  text-align: justify;
+  background: linear-gradient(45deg, #ff1493, #0086c2);
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html::-webkit-scrollbar {
+  width: 1vw;
+  background-color: #0086c2;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 0.5vw;
+  background-color: white;
+}
+.main {
+  display: flex;
+  align-items: start;
+  padding: 5vw;
+}
+.main > div {
+  padding: 2vw;
+  box-sizing: border-box;
+}
+.personal-information {
+  flex: 3 0 300px;
+  position: sticky;
+  left: 0;
+  top: 10px;
+  margin-right: 0.5vw;
+  background-color: white;
+}
+.personal-information .photo {
+  margin: 0 auto;
+  width: 140px;
+  height: 140px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: url(../media/Cloud.jpg) 2px 0 / cover;
+  pointer-events: none;
+}
+.personal-information h3 {
+  margin-top: 3vw;
+  height: 40px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+}
+.personal-information h4 {
+  margin-top: 1vw;
+  height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #c24cd6;
+}
+.personal-information ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 3vw auto 0;
+  width: 260px;
+  height: 150px;
+  font-size: 16px;
+}
+.personal-information ul > li {
+  height: 30px;
+}
+.personal-information a {
+  float: left;
+  overflow: hidden;
+  --copying-middle-color: #7fc9ff;
+}
+@keyframes copying-text {
+  50% {
+    color: var(--copying-middle-color);
+    fill: var(--copying-middle-color);
+  }
+  100% {
+    color: white;
+    fill: white;
+  }
+}
+@keyframes copying-background {
+  50% {
+    background-color: var(--copying-middle-color);
+  }
+  100% {
+    background-color: #0093ff;
+  }
+}
+.personal-information a:active.copyable {
+  animation: 5s linear;
+  animation-name: copying-text, copying-background;
+}
+.personal-information ul li svg {
+  float: left;
+  width: 30px;
+  fill: #0086c2;
+}
+.personal-information a:active.copyable > svg {
+  animation: copying-text 5s;
+}
+.personal-information ul li span {
+  float: left;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.personal-data {
+  flex: 7 1 700px;
+  position: relative;
+}
+.personal-data .watermark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../media/watermark.png), url(../media/watermark.png), url(../media/watermark.png), url(../media/watermark.png), url(../media/watermark.png), url(../media/watermark.png), url(../media/watermark.png), url(../media/watermark.png);
+  background-size: 336px;
+  background-position: 0 0, 126px -42px, 84px 84px, 42px -126px, -42px 126px, -126px 42px, -84px -84px, 168px 168px;
+  background-attachment: fixed;
+  background-color: white;
+  pointer-events: none;
+}
+.personal-data section {
+  margin-bottom: 3vw;
+}
+.personal-data h3 {
+  margin-bottom: 10px;
+  height: 40px;
+  font-size: 21.3px;
+  color: #0086c2;
+  line-height: 40px;
+}
+.personal-data p, .personal-data .text-list, .personal-data .reference {
+  padding: 0.5em 0;
+  color: #333;
+}
+/* 本网页由SorryYearnt制作，严禁转载。This web page is produced by SorryYearnt and is strictly forbidden to be reproduced. このページはSorryYearntで作成されており、転載は厳禁です。 */
+
+.professional-skills ul {
+  --li-width: 90px;
+  --icon-max-height: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--li-width));
+  justify-content: space-around;
+}
+.professional-skills li {
+  float: left;
+  margin-bottom: 1vw;
+  width: var(--li-width);
+}
+.professional-skills li > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.professional-skills li > div > * {
+  max-width: var(--li-width);
+  max-height: var(--icon-max-height);
+}
+.professional-skills h6 {
+  margin-top: 5px;
+  height: 2.5em;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+}
+.div-icon {
+  width: var(--icon-max-height);
+  height: var(--icon-max-height);
+}
+.git {
+  background: url(../media/git.png) 0 0 / cover;
+}
+.ECHARTS {
+  background: url(../media/ECHARTS.png) 0 0 / cover;
+}
+.GoogleTest {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  color: #fff;
+  background-color: black;
+}
+
+.background-experience h4 {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
+  text-align: left;
+  border-radius: 5px;
+  background-color: #00817d;
+}
+.background-experience h4 span:first-of-type {
+  float: left;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
+.background-experience h4 i {
+  position: absolute;
+  left: 70px;
+  top: 9px;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 3px solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+.background-experience li.show h4 i {
+  transform: translateY(-2.48px) rotate(45deg);
+}
+.background-experience h4 span:nth-of-type(2) {
+  float: left;
+  margin-left: 45px;
+  width: 20%;
+  height: 30px;
+  min-width: 6em;
+}
+.background-experience h4 span:nth-of-type(4) {
+  float: left;
+  width: 29%;
+  height: 30px;
+  min-width: 10em;
+}
+.background-experience h4 span:nth-of-type(3) {
+  float: right;
+  width: 34%;
+  height: 30px;
+  text-align: right;
+  min-width: 11em;
+}
+.background-experience > ul > li > div {
+  box-sizing: border-box;
+  margin-left: 32px;
+  padding: 0.5em 0 0.5em 1vw;
+  border-left: 6px solid #00817d;
+}
+.background-experience p, .background-experience .text-list {
+  padding-left: 0.5em;
+  border-left: 5px solid transparent;
+}
+.background-experience p:hover, .background-experience .text-list:hover {
+  border-color: #5bbab4;
+  background-color: rgba(192, 252, 247, 0.2);
+}
+.background-experience .hidden {
+  overflow: hidden;
+  transition: 0.5s;
+}
+.background-experience sup {
+  display: none;
+  color: #666;
+}
+.background-experience .text-list > li {
+  position: relative;
+  padding-left: 1.5em;
+}
+.background-experience .text-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0.5em;
+  top: 0.75em;
+  width: 5px;
+  height: 5px;
+  background-color: #00817d;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.background-experience .reference {
+  box-sizing: border-box;
+  padding-left: 2em;
+  font-size: 12px;
+  color: #666;
+}
+.background-experience .reference > li {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.professional-certificate li {
+  position: relative;
+  padding-left: 1em;
+  height: 30px;
+  line-height: 30px;
+  border-left: 5px solid #efa7c0;
+}
+.professional-certificate li:hover {
+  border-left-color: #ff1493;
+  background-color: #ffe3f4;
+}
+.professional-certificate li:hover::after {
+  content: attr(data-describe);
+  position: absolute;
+  left: 13em;
+  top: 0;
+  margin-top: 2px;
+  padding: 0 0.5em;
+  font-size: 12px;
+  line-height: 24px;
+  vertical-align: center;
+  color: #599700;
+  border: 1px solid #599700;
+}
+
+.independent-works ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.independent-works li {
+  width: 120px;
+}
+.independent-works li > a {
+  display: block;
+  margin: 10px auto 0;
+  width: 90px;
+  aspect-ratio: 1;
+}
+.independent-works ._2048 > a {
+  background-image: url(https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://sorryyearnt.github.io/2048/);
+}
+.independent-works .huarong-road > a {
+  background-image: url(https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://sorryyearnt.github.io/huarong-road/);
+}
+.independent-works .promise > a {
+  background-image: url(https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://github.com/SorryYearnt/promise/blob/main/Promise.js);
+}
+.independent-works h6 {
+  margin-top: 1em;
+  height: 2.5em;
+  font-size: 18.7px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.personal-data footer {
+  position: relative;
+  height: 30vh;
+  min-height: 150px;
+}
+.personal-data footer .Propaganda {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #777;
+  text-align: right;
+}
+.personal-data footer .Propaganda h6 {
+  margin-bottom: 4px;
+  font-size: inherit;
+  font-weight: normal;
+}
+.personal-data footer .Propaganda .access-statistics img {
+  max-width: 70vw;
+}
+
+.global-elements {
+  width: 0;
+  height: 0;
+}
+.prompt-information {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  padding: 0 20px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  animation: fade-out 2s forwards ease-in-out;
+}
+.copy-successfully {
+  background-color: #009f00;
+}
+.copy-unsuccessfully {
+  background-color: #ff4a73;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 4vw;
+  }
+  .personal-information {
+    flex: initial;
+    position: relative;
+    margin: 0 0 3vw;
+    border-radius: 5px;
+  }
+  .personal-information .photo {
+    position: absolute;
+    right: 5vw;
+    top: 7vw;
+    width: 100px;
+    height: 110px;
+    border: none;
+    border-radius: 0;
+    background-position: initial;
+  }
+  .personal-information h3 {
+    margin-top: 4vw;
+  }
+  .personal-information ul {
+    margin-top: 7vw;
+    width: 70%;
+    height: 70px;
+    flex-wrap: wrap;
+  }
+  .personal-data .watermark {
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .main > div {
+    padding: 8vw 4vw;
+  }
+  .personal-information {
+    position: initial;
+  }
+  .personal-information .photo {
+    position: initial;
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-position: 2px 0;
+  }
+  .personal-information ul {
+    width: 260px;
+    height: 150px;
+  }
+  .professional-skills ul {
+    --li-width: 78px;
+    --icon-max-height: 52px;
+  }
+  .professional-skills h6 {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .GoogleTest {
+    font-size: 14px;
+  }
+}
+
+.personal-information private {
+  background-color: black;
+}
+.personal-data h4 private {
+  background-color: white;
+}
+.personal-data p private {
+  background-color: #333;
+}
